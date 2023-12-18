@@ -1,0 +1,202 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+
+:root {
+  --main-color: #d7dadc;
+  --sub-color: #1a1a1b;
+  --cta-color: #ed1f24;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+  background-color: var(--sub-color);
+  max-width: 60vw;
+  margin: 0 auto;
+  color: var(--main-color);
+  line-height: 1.5;
+  /* width: 100vw;
+  height: 100vh;
+  display: flex; */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.2rem;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Fira Sans', sans-serif;
+}
+/*
+  5. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  6. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+  7. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/*
+  8. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.header {
+  display: flex;
+  padding-top: 5rem;
+  align-self: flex-start;
+  gap: 20rem;
+  margin: 0 auto;
+  margin-bottom: 5rem;
+  font-size: 2rem;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 30rem;
+}
+
+.primary-heading {
+  font-size: 6rem;
+  font-weight: 800;
+  margin-bottom: 4rem;
+  text-align: left;
+}
+
+.main {
+  margin-bottom: 10rem;
+}
+
+.info-links {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.info-link:link,
+.info-link:visited {
+  width: 50rem;
+  font-size: 2rem;
+  text-decoration: none;
+  color: var(--sub-color);
+  display: inline-block;
+  padding: 2rem;
+  background-color: var(--main-color);
+  border-radius: 0.5rem;
+  transition: all 300ms ease-in;
+}
+
+.info-link:hover,
+.info-link:active {
+  background-color: var(--cta-color);
+  color: var(--main-color);
+}
+
+.footer-nav {
+  display: flex;
+  align-self: flex-start;
+  gap: 20rem;
+  margin: 0 auto;
+  margin-bottom: 4rem;
+
+  font-size: 2rem;
+  justify-content: space-between;
+}
+
+.small {
+  text-align: center;
+  font-size: 1.8rem;
+  margin: 0 auto;
+  display: block;
+}
+
+.header,
+.footer-nav {
+  align-items: center;
+}
+
+.btn {
+  background-color: var(--cta-color);
+  outline: 0;
+  border: 0;
+  color: var(--main-color);
+  border-radius: 0.3rem;
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: var(--main-color);
+  color: var(--sub-color);
+}
+
+.logo-box {
+  margin-left: -3rem;
+}
+
+.btn-alt {
+  color: var(--main-color);
+  text-decoration: none;
+}
+
+.comments {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.user-comment {
+  font-size: 1.6rem;
+  width: 70%;
+  padding: 1rem;
+  padding-right: 5rem;
+  display: inline-block;
+  border-radius: 0.5rem;
+  color: var(--main-color);
+}
+
+.user {
+  font-weight: 400;
+}

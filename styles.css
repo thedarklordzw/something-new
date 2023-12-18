@@ -1,6 +1,12 @@
 /*
   1. Use a more-intuitive box-sizing model.
 */
+
+:root {
+  --main-color: #d7dadc;
+  --sub-color: #1a1a1b;
+  --cta-color: #ed1f24;
+}
 *,
 *::before,
 *::after {
@@ -18,6 +24,8 @@
   4. Improve text rendering
 */
 body {
+  background-color: var(--sub-color);
+  color: var(--main-color);
   line-height: 1.5;
   width: 100vw;
   height: 100vh;
@@ -83,8 +91,13 @@ html {
   justify-content: space-between;
 }
 
+.logo {
+  width: 30rem;
+}
+
 .primary-heading {
-  font-size: 5rem;
+  font-size: 6rem;
+  font-weight: 800;
   margin-bottom: 4rem;
   text-align: center;
 }
@@ -96,31 +109,71 @@ html {
 .info-links {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
+  gap: 2rem;
 }
 
-.info-link:link, .info-link:visited {
+.info-link:link,
+.info-link:visited {
+  width: 50rem;
   font-size: 2rem;
   text-decoration: none;
-  color: #000;
+  color: var(--sub-color);
   display: inline-block;
-  padding: 1rem 3.5rem;
-  background-color: #ddd;
-  border-radius: .5rem;
+  padding: 2rem;
+  background-color: var(--main-color);
+  border-radius: 0.5rem;
   transition: all 300ms ease-in;
-
 }
 
-.info-link:hover, .info-link:active {
-  background-color: red;
-  color: #fff;
+.info-link:hover,
+.info-link:active {
+  background-color: var(--cta-color);
+  color: var(--main-color);
 }
 
-
-
-.footer {
+.footer-nav {
   display: flex;
-  align-items: flex-start;
+  align-self: flex-start;
   gap: 20rem;
+  margin: 0 auto;
+  margin-bottom: 4rem;
+
+  font-size: 2rem;
   justify-content: space-between;
+}
+
+.small {
+  text-align: center;
+  font-size: 1.8rem;
+  margin: 0 auto;
+  display: block;
+}
+
+.header,
+.footer-nav {
+  align-items: center;
+}
+
+.btn {
+  background-color: var(--cta-color);
+  outline: 0;
+  border: 0;
+  color: var(--main-color);
+  border-radius: 0.3rem;
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: var(--main-color);
+  color: var(--sub-color);
+}
+
+.logo-box {
+  margin-left: -3rem;
+}
+
+.btn-alt {
+  color: var(--main-color);
+  text-decoration: none;
 }
