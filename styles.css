@@ -19,6 +19,13 @@
 */
 body {
   line-height: 1.5;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.2rem;
   -webkit-font-smoothing: antialiased;
   font-family: 'Fira Sans', sans-serif;
 }
@@ -62,6 +69,58 @@ h6 {
   isolation: isolate;
 }
 
-.info-link {
+html {
+  font-size: 62.5%;
+}
+
+.header {
+  display: flex;
+  align-self: flex-start;
+  gap: 20rem;
+  margin: 0 auto;
+  margin-bottom: 5rem;
+  font-size: 2rem;
+  justify-content: space-between;
+}
+
+.primary-heading {
+  font-size: 5rem;
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.main {
+  margin-bottom: 10rem;
+}
+
+.info-links {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.info-link:link, .info-link:visited {
+  font-size: 2rem;
+  text-decoration: none;
+  color: #000;
   display: inline-block;
+  padding: 1rem 3.5rem;
+  background-color: #ddd;
+  border-radius: .5rem;
+  transition: all 300ms ease-in;
+
+}
+
+.info-link:hover, .info-link:active {
+  background-color: red;
+  color: #fff;
+}
+
+
+
+.footer {
+  display: flex;
+  align-items: flex-start;
+  gap: 20rem;
+  justify-content: space-between;
 }
