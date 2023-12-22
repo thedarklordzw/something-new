@@ -87,7 +87,7 @@ html {
   display: flex;
   padding-top: 5rem;
   align-self: flex-start;
-  gap: 20rem;
+  gap: 5rem;
   margin: 0 auto;
   margin-bottom: 5rem;
   font-size: 2rem;
@@ -95,11 +95,13 @@ html {
 }
 
 .logo {
-  width: 30rem;
+  width: 38rem;
+  display: block;
+  flex: 1;
 }
 
 .primary-heading {
-  font-size: 6rem;
+  font-size: 4rem;
   font-weight: 800;
   margin-bottom: 4rem;
   text-align: left;
@@ -137,7 +139,7 @@ html {
 .footer-nav {
   display: flex;
   align-self: flex-start;
-  gap: 20rem;
+  gap: 5rem;
   margin: 0 auto;
   margin-bottom: 4rem;
 
@@ -159,11 +161,13 @@ html {
 
 .btn {
   background-color: var(--cta-color);
+  width: 20rem;
+  display: block;
   outline: 0;
   border: 0;
   color: var(--main-color);
   border-radius: 0.3rem;
-  padding: 0.5rem 1.5rem;
+
   cursor: pointer;
 }
 
@@ -184,19 +188,90 @@ html {
 .comments {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 2rem;
 }
 
 .user-comment {
-  font-size: 1.6rem;
-  width: 70%;
+  font-size: 1.7rem;
+  border: 0.1rem solid var(--main-color);
+
   padding: 1rem;
   padding-right: 5rem;
   display: inline-block;
-  border-radius: 0.5rem;
-  color: var(--main-color);
+  border-radius: 1rem;
 }
 
 .user {
-  font-weight: 400;
+  font-weight: 600;
+}
+
+.user-icon {
+  width: 3rem;
+  height: 3rem;
+  background-color: var(--cta-color);
+  border-radius: 1000rem;
+}
+
+@media screen and (max-width: 75em) {
+  .primary-heading {
+    font-size: 5.5rem;
+  }
+
+  .info-links {
+    grid-template-columns: 1fr;
+  }
+
+  .info-link:link,
+  .info-link:visited {
+    font-size: 1.8rem;
+    padding: 1.5rem;
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 94em) {
+  .primary-heading {
+    font-size: 4rem;
+  }
+
+  .btn {
+    font-size: 1.6rem;
+  }
+}
+
+@media screen and (max-width: 80em) {
+  .primary-heading {
+    font-size: 3.8rem;
+  }
+
+  .user-comment {
+    font-size: 1.6rem;
+    padding: 1rem;
+  }
+}
+
+@media screen and (max-width: 50em) {
+  body {
+    max-width: 80vw;
+  }
+
+  .header,
+  .footer-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .logo-box {
+    margin: 0;
+  }
+
+  .btn {
+    padding: 2rem 6rem;
+  }
+}
+
+@media screen and (max-width: 31.25em) {
+  .primary-heading {
+    font-size: 3.2rem;
+  }
 }
